@@ -2,6 +2,7 @@
 springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目模板（使用generator插件自动生成dao,mapper）
 
 ## １．准备数据库：
+```
  CREATE TABLE tb_user(
  	id int(32) PRIMARY KEY AUTO_INCREMENT,
 	username varchar(32),
@@ -10,7 +11,7 @@ springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目
  INSERT INTO tb_user VALUES (1,'小亮','北京市海淀区');
  INSERT INTO tb_user VALUES (２,'小思','沈阳市铁西区');
  INSERT INTO tb_user VALUES (３,'小明','兰州市安宁区');
-
+```
 ## ２．添加插件依赖：		
 <!-- mybatis generator 自动生成代码插件 -->
 <plugin>
