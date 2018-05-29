@@ -12,7 +12,8 @@ springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目
  INSERT INTO tb_user VALUES (２,'小思','沈阳市铁西区');
  INSERT INTO tb_user VALUES (３,'小明','兰州市安宁区');
 ```
-## ２．添加插件依赖：		
+## ２．添加插件依赖：
+```
 <!-- mybatis generator 自动生成代码插件 -->
 <plugin>
 	<groupId>org.mybatis.generator</groupId>
@@ -32,7 +33,7 @@ springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目
 		</dependency>
 	</dependencies>
 </plugin>
-
+```
 ## ３．generatorConfig.xml 更换为自己的数据库链接
 	<!--数据库链接URL，用户名、密码 -->
 	<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1/chensi" userId="root" password="root">
