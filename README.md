@@ -24,32 +24,16 @@ springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目
 	
 	
 ## 4.generator插件的使用
-	
-## ２．添加插件依赖：
+项目中已经自动生成了User实体，如需生成其他的类，按照如下方法生成：
+### 4.1 generatorConfig.xml 更换为自己的数据库链接
 ```
-<!-- mybatis generator 自动生成代码插件 -->
-<plugin>
-	<groupId>org.mybatis.generator</groupId>
-	<artifactId>mybatis-generator-maven-plugin</artifactId>
-	<version>1.3.2</version>
-	<configuration>
-		<configurationFile>${basedir}/src/main/resources/gaaenerator/generatorConfig.xml</configurationFile>
-		<overwrite>true</overwrite>
-		<verbose>true</verbose>
-	</configuration>
-	<dependencies>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.30</version>
-			<scope>runtime</scope>
-		</dependency>
-	</dependencies>
-</plugin>
-```
-## ３．generatorConfig.xml 更换为自己的数据库链接
-	<!--数据库链接URL，用户名、密码 -->
+<!--数据库链接URL，用户名、密码 -->
 	<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1/chensi" userId="root" password="root">
-	
-## ４．intellij 上配置generator插件run
-	run--> Edit Configurations... --> 新增＋　-->Maven -->Command line栏输入　mybatis-generator:generate -e　-->退出-->run 
+```
+### 4.2 generatorConfig.xml 更换准备生成实体与mapper的表
+```
+<!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+        <table tableName="tb_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+```
+### 4.3 intellij 上配置generator插件run
+run--> Edit Configurations... --> 新增＋　-->Maven -->Command line栏输入　mybatis-generator:generate -e　-->退出-->run 
