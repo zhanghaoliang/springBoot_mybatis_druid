@@ -2,7 +2,6 @@
 springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目模板（使用generator插件自动生成dao,mapper）
 
 准备数据库：
-#创建一个名称为tb_user的表
 
 添加插件依赖：		
 <!-- mybatis generator 自动生成代码插件 -->
