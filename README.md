@@ -28,12 +28,12 @@ springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目
 ### 4.1 generatorConfig.xml 更换为自己的数据库链接
 ```
 <!--数据库链接URL，用户名、密码 -->
-	<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1/chensi" userId="root" password="root">
+<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1/chensi" userId="root" password="root">
 ```
 ### 4.2 generatorConfig.xml 更换准备生成实体与mapper的表
 ```
 <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-        <table tableName="tb_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+<table tableName="tb_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 ```
 ### 4.3 intellij 上配置generator插件run
 run--> Edit Configurations... --> 新增＋　-->Maven -->Command line栏输入　mybatis-generator:generate -e　-->退出-->run 
