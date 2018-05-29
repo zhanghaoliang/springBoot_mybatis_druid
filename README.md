@@ -15,10 +15,11 @@ springBoot集成mybatis并使用druid连接池与PageHelper分页插件，项目
  INSERT INTO tb_user VALUES (２,'小思','沈阳市铁西区');
  INSERT INTO tb_user VALUES (３,'小明','兰州市安宁区');
 ```
-## 2.application中数据源位置更换为自己的数据库
+## 2.application.yml中数据源位置更换为自己的数据库
 
 ## 3.运行项目访问　
 	http://localhost:7777/user/getAll
+	http://localhost:7777/user/page
 ## 4.打开druid的sql监控
 	http://localhost:7777/druid　　　帐号名：zhl 密码:zhl    (application.yml中可以配置)
 	
