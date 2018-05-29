@@ -24,7 +24,6 @@ import java.util.regex.Matcher;
 /**
  * MyBatis 将mybatis要执行的sql拦截打印出来
  *
- * @since 1.0.0
  */
 @Intercepts
         ({

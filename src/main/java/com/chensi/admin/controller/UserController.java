@@ -18,6 +18,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 查询某一个人
+     * @return
+     */
     @GetMapping("/select")
     @ResponseBody
     public User selectUserById(){
@@ -25,12 +29,20 @@ public class UserController {
         return user;
     }
 
+    /**
+     * 查询所有人员
+     * @return
+     */
     @GetMapping("/getAll")
     @ResponseBody
     public List<User> getAllUser(){
         return this.userService.selectAllUser();
     }
 
+    /**
+     * 分页查询人员
+     * @return
+     */
     @GetMapping("/page")
     @ResponseBody
     public PageInfo<User> page(){
@@ -40,12 +52,15 @@ public class UserController {
         return userPageInfo;
     }
 
+    /**
+     * 新增人员
+     */
     @GetMapping("/insert")
     public void insert(){
         User u = new User();
         u.setId(4);
-        u.setUsername("小明");
-        u.setAddress("兰州市安宁区");
+        u.setUsername("小张");
+        u.setAddress("北京市朝阳区");
         this.userService.insertUser(u);
     }
 }

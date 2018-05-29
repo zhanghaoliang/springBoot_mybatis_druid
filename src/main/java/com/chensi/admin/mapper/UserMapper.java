@@ -4,7 +4,6 @@ import com.chensi.admin.model.User;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Mapper

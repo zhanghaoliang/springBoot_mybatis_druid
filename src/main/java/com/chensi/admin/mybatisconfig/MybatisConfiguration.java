@@ -11,9 +11,7 @@ import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -31,14 +29,12 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import com.github.pagehelper.PageHelper;
 /**
  * mybatis的相关配置设置
- * @author Jfei
  *
  */
 @Configuration
 @AutoConfigureAfter(DatasourceConfig.class)
 @ConfigurationProperties
 @EnableTransactionManagement
-//@MapperScan("com.fei.springboot.dao")
 public class MybatisConfiguration implements TransactionManagementConfigurer{
 
     private static Log logger = LogFactory.getLog(MybatisConfiguration.class);
@@ -48,7 +44,6 @@ public class MybatisConfiguration implements TransactionManagementConfigurer{
     private String typeAliasesPackage;
 
     //  配置mapper的扫描，找到所有的mapper.xml映射文件
-//        @Value("${mybatis.mapperLocations : classpath:com/fei/springboot/dao/*.xml}")
     @Value("${mybatis.mapperLocations}")
     private String mapperLocations;
 
